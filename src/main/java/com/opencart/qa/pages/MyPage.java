@@ -5,6 +5,12 @@ public class MyPage {
 	
 	String browser = "chrome";
 	
+	public void login() {
+		System.out.println("hello login");
+		System.out.println("hello login");
+		System.out.println("hello login");
+		System.out.println("hello login");
+	}
 	
 	
 	
