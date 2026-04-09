@@ -38,12 +38,10 @@ pipeline
                 
         stage('Regression Automation Tests') {
     steps {
+        cleanWs()
+        git branch: 'main', url: 'https://github.com/naveenanimation20/Nov2025POMFramework.git'
+        sh "pwd && ls -la && cat pom.xml | head -10"
         catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-            cleanWs()
-            git branch: 'main', url: 'https://github.com/naveenanimation20/Nov2025POMFramework.git'
-            sh "pwd"
-            sh "ls -la"
-            sh "cat pom.xml | head -10"
             sh "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_regression.xml -Denv=qa"
         }
     }
