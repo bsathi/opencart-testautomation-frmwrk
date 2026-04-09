@@ -25,7 +25,5 @@ public class AppConstants {
 	
 	public static final String REGISTER_SHEET_NAME = "register";
 	
-	
-	
 
 }
