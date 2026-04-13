@@ -17,7 +17,7 @@
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
 		<aspectj.version>1.9.19</aspectj.version>
-		<selenium.version>4.39.0</selenium.version>
+		<selenium.version>4.43.0</selenium.version>
 		<testng.version>7.7.0</testng.version>
 	</properties>
 
