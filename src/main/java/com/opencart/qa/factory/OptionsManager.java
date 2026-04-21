@@ -20,10 +20,13 @@ public class OptionsManager {
 
 	public ChromeOptions getChromeOptions() {
 		co = new ChromeOptions();
-		if (Boolean.parseBoolean(prop.getProperty("headless"))) {
+		if (Boolean.parseBoolean(prop.getProperty("headless"))|| 
+		        Boolean.parseBoolean(System.getProperty("headless"))) {
+			System.out.println("Running Chrome in Headless Mode...");
 			co.addArguments("--headless");
 		}
 		if (Boolean.parseBoolean(prop.getProperty("incognito"))) {
+			
 			co.addArguments("--incognito");
 		}
 		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
