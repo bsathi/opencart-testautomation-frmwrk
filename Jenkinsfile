@@ -40,8 +40,9 @@ pipeline
     steps {
         catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
             cleanWs()
-            git branch: 'main', url: 'https://github.com/naveenanimation20/Nov2025POMFramework.git'            
-            sh "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_regression.xml -Denv=qa"
+            git branch: 'main', url: 'https://github.com/bsathi/opencart-testautomation-frmwrk.git'  
+       //     sh "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_regression.xml -Denv=qa"
+       		bat "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_regression.xml -Denv=qa"
         }
     }
 }
@@ -86,8 +87,9 @@ pipeline
     steps {
         catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
             cleanWs()
-            git branch: 'main', url: 'https://github.com/naveenanimation20/Nov2025POMFramework.git'
-            sh "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_sanity.xml -Denv=stage"
+            git branch: 'main', url: 'https://github.com/bsathi/opencart-testautomation-frmwrk.git'
+//            sh "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_sanity.xml -Denv=stage"
+			bat "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_sanity.xml -Denv=stage"
         }
     }
 }
@@ -118,8 +120,9 @@ pipeline
     	steps {
         catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
             cleanWs()
-            git branch: 'main', url: 'https://github.com/naveenanimation20/Nov2025POMFramework.git'
-            sh "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_sanity.xml -Denv=prod"
+            git branch: 'main', url: 'https://github.com/bsathi/opencart-testautomation-frmwrk.git'
+      //      sh "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_sanity.xml -Denv=prod"
+      		bat "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_sanity.xml -Denv=prod"
         }
     }
 }

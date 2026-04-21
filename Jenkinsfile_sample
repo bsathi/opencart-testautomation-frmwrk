@@ -13,13 +13,13 @@ pipeline{
         
         stage("Run Unit test"){
             steps{
-                echo("run UTs")
+                echo("run Unit Tests")
             }
         }
         
         stage("Run Integration test"){
             steps{
-                echo("run ITs")
+                echo("run Integration Tests")
             }
         }
         
