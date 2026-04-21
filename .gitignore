@@ -6,7 +6,7 @@ build/
 
 opencart.log
 ##############################
-## Java
+## Java Files
 ##############################
 .mtj.tmp/
 *.class
@@ -17,7 +17,7 @@ opencart.log
 hs_err_pid*
 *.log
 ##############################
-## Maven
+## Maven Files
 ##############################
 target/
 pom.xml.tag
