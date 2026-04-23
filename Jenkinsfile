@@ -41,8 +41,8 @@ pipeline
     steps {
         catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
             cleanWs()
-        //    git branch: 'main', url: 'https://github.com/bsathi/opencart-testautomation-frmwrk.git'  
-        	git 'https://github.com/bsathi/opencart-testautomation-frmwrk.git'
+       		   git branch: 'main', url: 'https://github.com/bsathi/opencart-testautomation-frmwrk.git'  
+        //	git 'https://github.com/bsathi/opencart-testautomation-frmwrk.git'
        //     sh "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_regression.xml -Denv=qa"
        		bat "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_regression.xml -Denv=qa"
         }
